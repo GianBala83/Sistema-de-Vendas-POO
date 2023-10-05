@@ -1,3 +1,3 @@
 # Sistema-de-Vendas-POO
 
-Parar
+Sistema de Vendas com sistema de Gerente, Funcionário e Cliente
