@@ -2,8 +2,18 @@ public class Main {
     
 
     public static void main (String args[]){
-        Clients edcarlos = new Clients("Edcarlos", "83 9999-9999", "666.666.666.81", "Rua X");
+        
+        // Vamos te que usar coleções aqui
+        Clients Lista_Clientes[] = new Clients[1];
 
-        edcarlos.Mostra_Client();
+
+        // Os métodos de leitura deveram ser chamados no inicio do programa
+        Arquivos.reader("Clientes.txt", Lista_Clientes);
+        
+        
+        Lista_Clientes[0].Mostra_Client();
+
+        // Os métodos de gravação deveram ser chamados no final do programa
+        Arquivos.writter("Clientes.txt", Lista_Clientes);
     }
 }

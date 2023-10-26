@@ -6,6 +6,21 @@ public class Clients {
     private String endereco;
 
 
+    // Gets
+    public String getNome() {
+        return nome;
+    }
+    public String getTelefone() {
+        return telefone;
+    }
+    public String getCPF() {
+        return CPF;
+    }
+    public String getEndereco() {
+        return endereco;
+    }
+
+
 
     public  Clients (String nome, String telefone, String CPF, String endereco){
         //this.id_client = 1;
