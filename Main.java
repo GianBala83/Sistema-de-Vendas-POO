@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     
+    public static Scanner sc = new Scanner(System.in);
 
     public static void main (String args[]){
         
@@ -13,9 +15,31 @@ public class Main {
 
         // Os métodos de leitura deveram ser chamados no inicio do programa
         Arquivos.reader("Clientes.txt", Lista_Clientes);
+
+        int op = -1;
+        
+        do{
+            System.out.println("DGHM - Distribuidora LTDA");
+            System.out.println("1 - Cadastra Clients");
+            System.out.println("2 - Mostrar Clients");
+            System.out.println("0 - Sair");
+            op = sc.nextInt();
+
+            if (op == 1){
+                Cadastros.Cadastrar_Cliente(Lista_Clientes);
+            }
+            else if (op == 2){
+                int len = Lista_Clientes.size();
+                for (int i = 0; i<len; i++){
+                    System.out.println("===================================");
+                    Lista_Clientes.get(i).Mostra_Client();
+                    System.out.println("===================================");
+                }
+            }
+
+        }while(op != 0);
         
         
-        Lista_Clientes.get(0).Mostra_Client();
 
         // Os métodos de gravação deveram ser chamados no final do programa
         Arquivos.writter("Clientes.txt", Lista_Clientes);
