@@ -1,4 +1,5 @@
-public class Pedido {
+public class Pedido 
+{
     
     private int id_pedido;
     private String client;

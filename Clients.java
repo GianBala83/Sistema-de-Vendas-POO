@@ -1,4 +1,5 @@
-public class Clients {
+public class Clients 
+{
     //private int id_client;
     private String nome;
     private String telefone;
@@ -7,7 +8,8 @@ public class Clients {
 
 
 
-    public  Clients (String nome, String telefone, String CPF, String endereco){
+    public  Clients (String nome, String telefone, String CPF, String endereco)
+    {
         //this.id_client = 1;
         this.nome = nome;
         this.telefone = telefone;
@@ -15,7 +17,8 @@ public class Clients {
         this.endereco = endereco;
     }
     
-    public void Mostra_Client(){
+    public void Mostra_Client()
+    {
         System.out.printf("Nome    :%s\n", this.nome);
         System.out.printf("CPF     :%11s\n", this.CPF);
         System.out.printf("Telefone:%s\n", this.telefone);
