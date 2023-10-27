@@ -1,4 +1,6 @@
-public class Clients {
+package objetos;
+
+public class Cliente {
     //private int id_client;
     private String nome;
     private String telefone;
@@ -22,7 +24,7 @@ public class Clients {
 
 
 
-    public  Clients (String nome, String telefone, String CPF, String endereco){
+    public  Cliente (String nome, String telefone, String CPF, String endereco){
         //this.id_client = 1;
         this.nome = nome;
         this.telefone = telefone;

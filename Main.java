@@ -1,6 +1,10 @@
+//
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+//
+import objetos.*;
+import funcoes.*;
 
 public class Main {
     
@@ -9,12 +13,12 @@ public class Main {
     public static void main (String args[]){
         
         // Vamos te que usar coleções aqui
-        List<Clients> Lista_Clientes = new ArrayList<>();
+        List<Cliente> Lista_Clientes = new ArrayList<>();
         //Clients Lista_Clientes[] = new Clients[5];
 
 
         // Os métodos de leitura deveram ser chamados no inicio do programa
-        Arquivos.reader("Clientes.txt", Lista_Clientes);
+        Arquivo.reader("Clientes.txt", Lista_Clientes);
 
         int op = -1;
         
@@ -42,7 +46,7 @@ public class Main {
         
 
         // Os métodos de gravação deveram ser chamados no final do programa
-        Arquivos.writter("Clientes.txt", Lista_Clientes);
+        Arquivo.writter("Clientes.txt", Lista_Clientes);
     }
 
     // Move para cadastro essa função//

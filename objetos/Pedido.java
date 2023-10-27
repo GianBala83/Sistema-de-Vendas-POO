@@ -1,3 +1,5 @@
+package objetos;
+
 public class Pedido {
     
     private int id_pedido;

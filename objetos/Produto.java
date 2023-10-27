@@ -1,3 +1,5 @@
+package objetos;
+
 public class Produto{
 	private int id_produto;
 	private String nome;

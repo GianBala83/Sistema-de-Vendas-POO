@@ -1,10 +1,13 @@
+package funcoes;
+
 import java.util.List;
 import java.util.Scanner;
+import objetos.*;
 public class Cadastros {
 
     private static Scanner sc = new Scanner(System.in);
     
-    public static void Cadastrar_Cliente(List<Clients> Clientes){
+    public static void Cadastrar_Cliente(List<Cliente> Clientes){
         String nome;
         String telefone;
         String CPF;
@@ -19,7 +22,7 @@ public class Cadastros {
         System.out.println("Digite o Endereço do Cliente: ");
         Endereço = sc.nextLine();
 
-        Clients atual = new Clients(nome, telefone, CPF, Endereço);
+        Cliente atual = new Cliente(nome, telefone, CPF, Endereço);
 
         Clientes.add(atual);
 

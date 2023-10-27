@@ -1,3 +1,5 @@
+package objetos;
+
 public class Estoque{
 	private int id_estoque;
 	private Produto p;
