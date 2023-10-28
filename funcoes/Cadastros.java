@@ -13,6 +13,7 @@ public class Cadastros {
         String CPF;
         String Endereço;
 
+        Functions.CleanConsole();
         System.out.println("Digite o Nome do Cliente: ");
         nome = sc.nextLine();
         System.out.println("Digite o Telefone do Cliente: ");
@@ -25,6 +26,8 @@ public class Cadastros {
         Cliente atual = new Cliente(nome, telefone, CPF, Endereço);
 
         Clientes.add(atual);
+        System.out.println("Cadastro concluido como sucesso!");
+        Functions.PauseConsole();
 
 
     }

@@ -22,8 +22,22 @@ public class Cliente {
         return endereco;
     }
 
+    // Sets
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+    public void setCPF(String cPF) {
+        CPF = cPF;
+    }
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
 
 
+    // Construtor
     public  Cliente (String nome, String telefone, String CPF, String endereco){
         //this.id_client = 1;
         this.nome = nome;
@@ -32,7 +46,8 @@ public class Cliente {
         this.endereco = endereco;
     }
     
-    public void Mostra_Client(){
+    // Outros
+    public void Mostra_Cliente(){
         System.out.printf("Nome    :%s\n", this.nome);
         System.out.printf("CPF     :%11s\n", this.CPF);
         System.out.printf("Telefone:%s\n", this.telefone);

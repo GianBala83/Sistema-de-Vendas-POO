@@ -21,24 +21,54 @@ public class Main {
         Arquivo.reader("Clientes.txt", Lista_Clientes);
 
         int op = -1;
+        int op2 = -1;
         
+        // Menu Principal da Aplicação
         do{
+            Functions.CleanConsole();
+            System.out.println("===================================");
             System.out.println("DGHM - Distribuidora LTDA");
-            System.out.println("1 - Cadastra Clients");
-            System.out.println("2 - Mostrar Clients");
+            System.out.println("===================================");
+            System.out.println("1 - Realizar Cadastro");
+            System.out.println("2 - Gerenciar Vendas");
+            System.out.println("3 - Gerenciar Estoque");
+            System.out.println("4 - Mostra Cadastros");
             System.out.println("0 - Sair");
             op = sc.nextInt();
 
             if (op == 1){
+                Functions.CleanConsole();
+                System.out.println("1 - Cadastrar Cliente");
+                System.out.println("2 - Cadastrar Fornecedor");
+                System.out.println("3 - Cadastrar Produto");
+                System.out.println("0 - Voltar");
+                op2 = sc.nextInt();
+                if (op2 == 1){
                 Cadastros.Cadastrar_Cliente(Lista_Clientes);
-            }
-            else if (op == 2){
-                int len = Lista_Clientes.size();
-                for (int i = 0; i<len; i++){
-                    System.out.println("===================================");
-                    Lista_Clientes.get(i).Mostra_Client();
-                    System.out.println("===================================");
                 }
+                op2 = -1;
+            }
+            else if (op == 4){
+                Functions.CleanConsole();
+                System.out.println("1 - Cliente");
+                System.out.println("2 - Fornecedor");
+                System.out.println("3 - Produto");
+                System.out.println("0 - Voltar");
+                op2 = sc.nextInt();
+                // Cada um vai te uma função em lugar especifico
+                // isso aqui é temporario
+                if (op2 == 1){
+                    Functions.CleanConsole();
+                    int len = Lista_Clientes.size();
+                    for (int i = 0; i<len; i++){
+                        System.out.println("===================================");
+                        Lista_Clientes.get(i).Mostra_Cliente();
+                        System.out.println("===================================");
+                    }
+                    Functions.PauseConsole();
+                }
+                op2 = -1;
+                
             }
 
         }while(op != 0);
