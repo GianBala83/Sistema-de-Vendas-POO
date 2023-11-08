@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 import modelo.Cliente;
 import principal.MenuPrincipal;
-import visao.cadastrar.CadastrarCliente;
 
 public class Main {
     
