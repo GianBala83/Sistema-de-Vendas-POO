@@ -3,20 +3,18 @@ package principal;
 import java.util.Scanner;
 
 import funcao.FuncaoSO;
-import visao.cadastrar.CadastrarProduto;
-import visao.excluir.ExcluirProduto;
-import visao.listar.ListarProduto;
+import modelo.Cliente;
 
-public class MenuProduto {
-    
-    public void telaMenuProduto(){
+public class MenuCliente 
+{
+    public void telaMenuCliente(){
         
         Scanner sc;
         int opcao,laco;
 
-        CadastrarProduto cp = new CadastrarProduto();
-        ExcluirProduto ep = new ExcluirProduto();
-        ListarProduto lp = new ListarProduto();
+        Cliente j = new Cliente();
+        MenuCliente me = new MenuCliente();
+        //ListarProduto lp = new ListarProduto();
         
         try {
             String so = FuncaoSO.obterSistemaOperacional();
@@ -26,9 +24,9 @@ public class MenuProduto {
                 sc = new Scanner(System.in);
                 laco = 0;
                 System.out.println("==============================");
-                System.out.println("1 - Cadastrar Produto");
-                System.out.println("2 - Excluir Produto");
-                System.out.println("3 - Listar Produtos");
+                System.out.println("1 - Cadastrar Cliente");
+                System.out.println("2 - Remover Cliente");
+                System.out.println("3 - Listar Clientes");
                 System.out.println("4 - Sair");
                 System.out.println("==============================");
             
@@ -38,19 +36,18 @@ public class MenuProduto {
 
                 switch (opcao) {
                     case 1:
-                        cp.CadastrarP(sc);
+                        j.valoresCliente(j,sc);
                         Thread.sleep(2000);
                         break;
                     case 2:
-                        lp.Listar();
-                        ep.Excluir(sc);
+                        j.ExcluirCliente(sc);
                         Thread.sleep(2000);
                         break;
                     case 3:
-                        lp.Listar();
+                        j.ListarP();
                         sc.nextLine();
                         sc.nextLine();
-                        break;
+                        break;    
                     case 4:
                         FuncaoSO.limpar(so);
                         laco = 1;
@@ -65,5 +62,6 @@ public class MenuProduto {
             e.printStackTrace();
         }
     }
-    
+
 }
+

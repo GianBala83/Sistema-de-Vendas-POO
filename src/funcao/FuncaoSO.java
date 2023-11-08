@@ -5,7 +5,7 @@ public class FuncaoSO {
         String os = System.getProperty("os.name").toLowerCase();
     
         if (os.contains("win")) {
-            return "Windows";
+            return "win";
         } else if (os.contains("mac")) {
             return "Mac OS";
         } else if (os.contains("nix") || os.contains("nux")) {

@@ -8,7 +8,7 @@ import visao.cadastrar.CadastrarEstoque;
 import visao.listar.ListarProduto;
 
 public class MenuEstoque {
-    public void TelaMenuEstoque(){
+    public void telaMenuEstoque(){
         Scanner sc;
         int opcao,laco;
 

@@ -6,12 +6,12 @@ import funcao.FuncaoProduto;
 import modelo.Produto;
 
 public class CadastrarProduto {
-    public void Cadastrar(Scanner sc){
+    public void CadastrarP(Scanner sc){
         // Declaração de objetos
         
         Produto p = new Produto();
         FuncaoProduto funcaoproduto = new FuncaoProduto();
-
+        
         try {
             //System.out.print("Digite o ID do produto: ");
             //id_produto = sc.nextInt();

@@ -3,20 +3,19 @@ package principal;
 import java.util.Scanner;
 
 import funcao.FuncaoSO;
-import visao.cadastrar.CadastrarProduto;
-import visao.excluir.ExcluirProduto;
-import visao.listar.ListarProduto;
 
-public class MenuProduto {
-    
-    public void telaMenuProduto(){
+
+public class MenuPrincipal 
+{
+    public void telaMenuPrincipal(){
         
         Scanner sc;
         int opcao,laco;
 
-        CadastrarProduto cp = new CadastrarProduto();
-        ExcluirProduto ep = new ExcluirProduto();
-        ListarProduto lp = new ListarProduto();
+        MenuProduto mp = new MenuProduto();
+        MenuEstoque me = new MenuEstoque();
+        MenuCliente mc = new MenuCliente();
+        //ListarProduto lp = new ListarProduto();
         
         try {
             String so = FuncaoSO.obterSistemaOperacional();
@@ -26,9 +25,9 @@ public class MenuProduto {
                 sc = new Scanner(System.in);
                 laco = 0;
                 System.out.println("==============================");
-                System.out.println("1 - Cadastrar Produto");
-                System.out.println("2 - Excluir Produto");
-                System.out.println("3 - Listar Produtos");
+                System.out.println("1 - Menu Produto");
+                System.out.println("2 - Menu Estoque");
+                System.out.println("3 - Menu Cliente");
                 System.out.println("4 - Sair");
                 System.out.println("==============================");
             
@@ -38,18 +37,16 @@ public class MenuProduto {
 
                 switch (opcao) {
                     case 1:
-                        cp.CadastrarP(sc);
+                        mp.telaMenuProduto();
                         Thread.sleep(2000);
                         break;
                     case 2:
-                        lp.Listar();
-                        ep.Excluir(sc);
+                        me.telaMenuEstoque();
                         Thread.sleep(2000);
                         break;
                     case 3:
-                        lp.Listar();
-                        sc.nextLine();
-                        sc.nextLine();
+                        mc.telaMenuCliente();
+                        Thread.sleep(2000);
                         break;
                     case 4:
                         FuncaoSO.limpar(so);
@@ -67,3 +64,4 @@ public class MenuProduto {
     }
     
 }
+

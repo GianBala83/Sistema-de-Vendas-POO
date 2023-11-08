@@ -4,3 +4,5 @@
 4 - 3 - 3.0
 5 - Coca - 6.0
 6 - Cerveja - 3.5
+8 - banana - 3.5
+9 - arroz - 5.0
