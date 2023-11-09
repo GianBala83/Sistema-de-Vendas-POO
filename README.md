@@ -1,6 +1,6 @@
 # Sistema-de-Vendas-POO
 
-Um Sistema de Vendas construindo utilizando a Programação Orientada à Objetos
+Um Sistema de Vendas construido utilizando a Programação Orientada à Objetos
 
 O programa consiste num sistema no qual você é um funcionário responsável por gerenciar uma loja.
 
